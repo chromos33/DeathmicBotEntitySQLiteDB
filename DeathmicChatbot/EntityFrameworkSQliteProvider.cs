@@ -37,7 +37,9 @@ namespace DeathmicChatbot
     public class UserContext : DbContext
     {
         public UserContext()
+            : base("name=UserModel")
         {
+            
             Database.SetInitializer<UserContext>(null);
         }
         public DbSet<UserModel> Users { get; set; }
