@@ -23,6 +23,7 @@ namespace DeathmicChatbot
             _context.Database.CreateIfNotExists();
             System.Diagnostics.Debug.WriteLine(_context.Database.Connection.ConnectionString);
             Console.WriteLine(_context.Database.Connection.ConnectionString);
+            _context.Database.Connection.ConnectionString= "Data Source=DeathmicChatbot.sqlite";
             var nickfromdb = (from u in _context.Users where u.nick.Equals(_user.nick) select u);
             if(nickfromdb.Count() >0)
             {
