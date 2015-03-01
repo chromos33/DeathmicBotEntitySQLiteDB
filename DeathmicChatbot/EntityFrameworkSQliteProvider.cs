@@ -21,6 +21,8 @@ namespace DeathmicChatbot
             _user.nick = "test2";
             _user.visitcount++;
             _context.Database.CreateIfNotExists();
+            System.Diagnostics.Debug.WriteLine(_context.Database.Connection.ConnectionString);
+            Console.WriteLine(_context.Database.Connection.ConnectionString);
             var nickfromdb = (from u in _context.Users where u.nick.Equals(_user.nick) select u);
             if(nickfromdb.Count() >0)
             {
