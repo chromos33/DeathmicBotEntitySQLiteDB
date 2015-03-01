@@ -60,10 +60,9 @@ namespace DeathmicChatbot
             ServicePointManager.ServerCertificateValidationCallback =
                 (sender, certificate, chain, errors) => true;
 
-            XMLProvider test = new XMLProvider();
-            test.InitializeUserXML();
-            test.AddorUpdateUser("Init");
-            test.AddorUpdateUser("test");
+            XMLProvider xmlClass = new XMLProvider();
+            xmlClass.AddorUpdateUser("Init");
+            xmlClass.AddorUpdateUser("test");
 
             LoadChosenUsers();
             Connect();
