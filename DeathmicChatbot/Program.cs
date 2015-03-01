@@ -60,12 +60,13 @@ namespace DeathmicChatbot
             ServicePointManager.ServerCertificateValidationCallback =
                 (sender, certificate, chain, errors) => true;
 
+            XMLProvider test = new XMLProvider();
+            test.InitializeUserXML();
+            test.AddorUpdateUser("Init");
+            test.AddorUpdateUser("test");
+
             LoadChosenUsers();
             Connect();
-
-            _model = new Model(new SqliteDatabaseProvider());
-            EntityFrameworkSQliteProvider _model2 = new EntityFrameworkSQliteProvider();
-            _model2.testDB();
             
         }
 
