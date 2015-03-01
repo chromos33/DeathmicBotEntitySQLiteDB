@@ -56,6 +56,8 @@ namespace DeathmicChatbot
 
         private static void Main(string[] args)
         {
+            UserContext _context = new UserContext();
+            Console.WriteLine(_context.Database.Connection.ConnectionString);
             _debugMode = args.Length > 0 && args.Contains("debug");
 
             ServicePointManager.ServerCertificateValidationCallback =
