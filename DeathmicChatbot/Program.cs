@@ -65,8 +65,8 @@ namespace DeathmicChatbot
             Connect();
 
             _model = new Model(new SqliteDatabaseProvider());
-            //EntityFrameworkSQliteProvider _model2 = new EntityFrameworkSQliteProvider();
-            //_model2.testDB();
+            EntityFrameworkSQliteProvider _model2 = new EntityFrameworkSQliteProvider();
+            _model2.testDB();
             
         }
 
