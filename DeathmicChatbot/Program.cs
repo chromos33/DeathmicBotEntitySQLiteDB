@@ -61,8 +61,6 @@ namespace DeathmicChatbot
                 (sender, certificate, chain, errors) => true;
 
             XMLProvider xmlClass = new XMLProvider();
-            xmlClass.AddorUpdateUser("Init");
-            xmlClass.AddorUpdateUser("test");
 
             LoadChosenUsers();
             Connect();
